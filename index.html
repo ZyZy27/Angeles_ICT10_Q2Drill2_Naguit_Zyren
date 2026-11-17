@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRILL#2_2Q</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
+
+    <style>
+        body{
+            background: radial-gradient(circle at top, #B9E4E8 8%, #e4e9ec 100%);
+            color: #071B2B;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 28px;
+            width: 100%;
+        }
+
+        .header{
+            background: linear-gradient(145deg, #0a253b, #05131f);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            text-align: center;
+            color: #EEEEEE;
+            padding: 28px 24px;
+            width: 100%;
+            max-width: 680px;
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.12),
+                0 20px 35px -15px rgba(7, 27, 43, 0.45);
+        }
+        .header h1{
+            font-size: 40px;
+        }
+        .header p{
+            font-size: 15px;
+        }
+
+        .container, .output{
+            background: linear-gradient(155deg, #188a9b 0%, #116572 100%);
+            width: 100%;
+            max-width: 480px;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.22);
+            border-radius: 18px;
+            color: #EEEEEE;
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.25),
+                0 22px 40px -15px rgba(7, 27, 43, 0.35);
+
+        }
+        .container p{
+            font-size: 20px;
+            color: #EEEEEE;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .container input{
+            margin-top: 10px;
+            width: 80%;
+            padding: 10px 15px;
+            font-size: 15px;
+            letter-spacing: 0.01em;
+            color: #071B2B;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            box-shadow: 
+                inset 0 2px 4px rgba(0, 0, 0, 0.4),         
+                0 1px 0 rgba(255, 255, 255, 0.04);          
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .btn {
+            width: 100%;
+            margin-top: 8px;
+            padding: 13px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            background: linear-gradient(180deg, #ccf0f3 0%, #a5dce1 100%);
+            color: #071B2B;
+            cursor: pointer;
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.7),
+                0 8px 18px -6px rgba(7, 27, 43, 0.4);
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            background: linear-gradient(180deg, #dcf6f8 0%, #b9e4e8 100%);
+            box-shadow: 
+                inset 0 1px 0 rgba(255, 255, 255, 0.9),
+                0 12px 22px -6px rgba(7, 27, 43, 0.5);
+        }
+        
+
+        .output h2{
+            font-size: 30px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>Add a New Member</h1>
+            <p>ICT Club Operator</p>
+        </div>
+
+        <div class="container">
+            <p>Input Member Details</p>
+            <input id="fname" type="text" placeholder="First Name"><br>
+            <input id="lname" type="text" placeholder="Last Name"><br>
+            <button type="button" class="btn" py-click="add_nm">Add Member</button>
+        </div>
+
+        <div class="output">
+            <h2>All Members</h2>
+            <p id="msg"></p>
+        </div>
+    </div>
+    
+
+    <script type="py" src="./main.py"></script>
+    
+</body>
+</html>
